@@ -6,7 +6,7 @@
 					<img src="{{ Vite::asset('resources/images/logo-footer.png') }}" alt="">
 				</a>
 				<p class="footer__text">
-					Адрес офиса и производства ООО «Альфапласт»: Московская область, Солнечногорский район, Ленинградское шоссе, деревня Поярково, улица Клушинская 2.
+					{{ contacts()->address }}
 				</p>
 			</div>
 			<ul class="footer__list">
@@ -17,8 +17,8 @@
 			</ul>
 			<div class="mb-57">
 				<ul class="footer__contact">
-					<li><a href="tel:+74955040605">+7 (495) 504-06-05</a></li>
-					<li><a href="mailto:plastbox@mail.ru">plastbox@mail.ru</a></li>
+					<li><a href="tel:{{ clear_phone(contacts()->primary_phone) }}">{{ contacts()->primary_phone }}</a></li>
+					<li><a href="mailto:{{ contacts()->email }}">{{ contacts()->email }}</a></li>
 				</ul>
 			</div>
 		</div>

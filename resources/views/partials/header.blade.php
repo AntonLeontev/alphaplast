@@ -14,7 +14,7 @@
 				<li class="menu__item"><a class="menu__link btn-hover" href="{{ route('contacts') }}">Контакты</a></li>
 			</ul>
 			<div class="menu__adrees">
-				<a href="tel:+74955040605">+7 (495) 504-06-05</a>   
+				<a href="tel:{{ clear_phone(contacts()->primary_phone) }}">{{ contacts()->primary_phone }}</a>   
 			</div>
 		</div>
 		<button type="button" class="menu-burger color-green d-flex flex-column justify-content-center align-items-center">
@@ -23,7 +23,7 @@
 			<span></span>
 		</button>
 		<div class="header__adrees">
-			<a href="tel:+74955040605">+7 (495) 504-06-05</a>
+			<a href="tel:{{ clear_phone(contacts()->primary_phone) }}">{{ contacts()->primary_phone }}</a>
 		</div>
 	</div>
 </header>

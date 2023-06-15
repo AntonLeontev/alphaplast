@@ -1,5 +1,10 @@
 <?php
 
+use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\CatalogController;
+use App\Http\Controllers\ContactsController;
+use App\Http\Controllers\HomePageController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,14 +18,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', HomePageController::class)->name('home');
 
-Route::view('contacts', 'contacts')->name('contacts');
+Route::get('contacts', ContactsController::class)->name('contacts');
 Route::view('about', 'about')->name('about');
 Route::view('cookie-policy', 'cookie-policy')->name('cookie-policy');
 Route::view('user-agreement', 'user-agreement')->name('user-agreement');
 
-Route::view('news', 'news')->name('news');
-Route::get('catalog', [])->name('catalog');
+Route::get('catalog', [CatalogController::class, 'index'])->name('catalog');
+Route::get('news', [ArticleController::class, 'index'])->name('news');
+Route::get('news/{article:slug}', [ArticleController::class, 'show'])->name('articles.show');
+
+Route::get('product/{product}', [ProductController::class, 'show'])->name('products.show');

@@ -8,7 +8,7 @@ return [
     'namespace' => 'App\MoonShine',
 
     'title' => env('MOONSHINE_TITLE', 'Альфапласт'),
-    'logo' => env('MOONSHINE_LOGO'),
+    'logo' => '/storage/images/logo-footer.png',
     'logo_small' => env('MOONSHINE_LOGO_SMALL'),
 
     'route' => [
@@ -57,11 +57,8 @@ return [
     ],
     'header' => null, // blade path
     'footer' => [
-        'copyright' => 'Made with ❤️ by <a href="https://cutcode.dev" class="font-semibold text-purple hover:text-pink" target="_blank">CutCode</a>',
         'nav' => [
-            'https://github.com/moonshine-software/moonshine/blob/1.5.x/LICENSE.md' => 'License',
-            'https://moonshine.cutcode.dev' => 'Documentation',
-            'https://github.com/moonshine-software/moonshine' => 'GitHub',
+            'https://t.me/totsamiyparen' => 'Связь с разработчиком',
         ],
     ],
 ];

@@ -4,11 +4,7 @@
 
 @section('content')
 	<main>
-    <section class="hero" >
-        <div class="container">
-            <h1 class="hero__title">ПЭТ-тара от «Альфапласт» - совершенство в деталях</h1>
-        </div>
-    </section>
+	<x-h1>ПЭТ-тара от «Альфапласт» - совершенство в деталях</x-h1>
     
     <section class="about-text">
         <div class="container">

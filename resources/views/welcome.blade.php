@@ -118,20 +118,11 @@
                 <div class="teachers__wrap row gy-4 justify-content-center justify-content-lg-between">
                     <div class="pb-4 col-lg-4 teachers__card">
                         <picture>
-                            <img class="" src="{{ Vite::asset('resources/images/card-section3-1.png') }}" alt="фото" />
-                        </picture>
-                        <div class="">
-                            <h3 class="teachers__card-title">Флаконы</h3>
-                            <a class="btn-hover" href="catalog.html">Смотреть</a>
-                        </div>
-                    </div>
-                    <div class="pb-4 col-lg-4 teachers__card">
-                        <picture>
                             <img class="" src="{{ Vite::asset('resources/images/card-section3-2.png') }}" alt="фото" />
                         </picture>
                         <div class="">
-                            <h3 class="teachers__card-title">Флаконы</h3>
-                            <a class="btn-hover" href="catalog.html">Смотреть</a>
+                            <h3 class="teachers__card-title">Банки</h3>
+                            <a class="btn-hover" href="{{ route('catalog') }}">Смотреть</a>
                         </div>
                     </div>
                     <div class="pb-4 col-lg-4 teachers__card">
@@ -139,8 +130,8 @@
                             <img class="" src="{{ Vite::asset('resources/images/card-section3-3.png') }}" alt="фото" />
                         </picture>
                         <div class="">
-                            <h3 class="teachers__card-title">Флаконы</h3>
-                            <a class="btn-hover" href="catalog.html">Смотреть</a>
+                            <h3 class="teachers__card-title">Бутылки</h3>
+                            <a class="btn-hover" href="{{ route('catalog') }}">Смотреть</a>
                         </div>
                     </div>
                     <div class="pb-4 col-lg-4 teachers__card">
@@ -148,8 +139,8 @@
                             <img class="" src="{{ Vite::asset('resources/images/card-section3-4.png') }}" alt="фото" />
                         </picture>
                         <div class="">
-                            <h3 class="teachers__card-title">Флаконы</h3>
-                            <a class="btn-hover" href="catalog.html">Смотреть</a>
+                            <h3 class="teachers__card-title">Крышки</h3>
+                            <a class="btn-hover" href="{{ route('catalog') }}">Смотреть</a>
                         </div>
                     </div>
                     <div class="pb-4 col-lg-4 teachers__card">
@@ -157,8 +148,8 @@
                             <img class="" src="{{ Vite::asset('resources/images/card-section3-5.png') }}" alt="фото" />
                         </picture>
                         <div class="">
-                            <h3 class="teachers__card-title">Флаконы</h3>
-                            <a class="btn-hover" href="catalog.html">Смотреть</a>
+                            <h3 class="teachers__card-title">Преформы</h3>
+                            <a class="btn-hover" href="{{ route('catalog') }}">Смотреть</a>
                         </div>
                     </div>
                     <div class="pb-4 col-lg-4 teachers__card">
@@ -166,8 +157,17 @@
                             <img class="" src="{{ Vite::asset('resources/images/card-section3-6.png') }}" alt="фото" />
                         </picture>
                         <div class="">
-                            <h3 class="teachers__card-title">Флаконы</h3>
-                            <a class="btn-hover" href="catalog.html">Смотреть</a>
+                            <h3 class="teachers__card-title">Пресс-формы</h3>
+                            <a class="btn-hover" href="{{ route('catalog') }}">Смотреть</a>
+                        </div>
+                    </div>
+					<div class="pb-4 col-lg-4 teachers__card">
+                        <picture>
+                            <img class="" src="{{ Vite::asset('resources/images/card-section3-1.png') }}" alt="фото" />
+                        </picture>
+                        <div class="">
+                            <h3 class="teachers__card-title">ПЭТ-преформа для банок</h3>
+                            <a class="btn-hover" href="{{ route('catalog') }}">Смотреть</a>
                         </div>
                     </div>
                 </div>
@@ -278,64 +278,29 @@
             </div>
         </section>
 
-        <section class="schedule" id="section">
-            <div class="container">
-                <h2>Новости и полезные статьи</h2>
-                <div class="schedule__slider swiper">
-                    <div class="swiper-wrapper">
+		@if ($articles->isNotEmpty())
+			<section class="schedule" id="section">
+				<div class="container">
+					<h2>Новости и полезные статьи</h2>
+					<div class="schedule__slider swiper">
+						<div class="swiper-wrapper">
 
-                        <div class="swiper-slide">
-                            <div class="schedule__item">
-                                <picture>
-                                    <img class="" src="{{ Vite::asset('resources/images/card-section6-1.png') }}" alt="фото" />
-                                </picture>
-                                <div class="schedule__item-wrapp">
-                                    <h3 class="">Преимущества ПЭТ пластиковых бутылок и банок</h3>
-                                    <p>ПЭТ-пластиковые бутылки и банки в настоящее время стали незаменимыми в повседневной
-                                        жизни....</p>
-                                    <a href="post-1.html">читать</a>
-                                </div>
-                            </div>
-                        </div>
+							@foreach ($articles as $article)
+								<div class="swiper-slide">
+									<x-article-preview :$article />
+								</div>
+							@endforeach
 
-                        <div class="swiper-slide">
-                            <div class="schedule__item">
-                                <picture>
-                                    <img class="" src="{{ Vite::asset('resources/images/card-section6-2.png') }}" alt="фото" />
-                                </picture>
-                                <div class="schedule__item-wrapp">
-                                    <h3 class="">Преимущества ПЭТ пластиковых бутылок и банок</h3>
-                                    <p>ПЭТ-бутылки и банки широко используются в промышленности и быту, благодаря своим
-                                        удобству, легкости....</p>
-                                    <a href="post-1.html">читать</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="schedule__item">
-                                <picture>
-                                    <img class="" src="{{ Vite::asset('resources/images/card-section6-3.png') }}" alt="фото" />
-                                </picture>
-                                <div class="schedule__item-wrapp">
-                                    <h3 class="">Преимущества ПЭТ пластиковых бутылок и банок</h3>
-                                    <p>ПЭТ-бутылки и ПЭТ-банки являются одними из наиболее популярных видов упаковки в мире.
-                                        Они... </p>
-                                    <a href="post-1.html">читать</a>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-                    </div>
-                    <!-- <div class="swiper-pagination advantages__pagination"></div> -->
-                    <div class="cases__wrapper-btn schedule__wrapper-btn">
-                        <div class="swiper-button-prev swiper-button-schedule-prev"></div>
-                        <div class="swiper-button-next swiper-button-schedule-next"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
+						</div>
+						<!-- <div class="swiper-pagination advantages__pagination"></div> -->
+						<div class="cases__wrapper-btn schedule__wrapper-btn">
+							<div class="swiper-button-prev swiper-button-schedule-prev"></div>
+							<div class="swiper-button-next swiper-button-schedule-next"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+		@endif
 
         <section class="free-feedback" id="free-feedback">
             <div class="container">
