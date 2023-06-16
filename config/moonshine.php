@@ -57,8 +57,5 @@ return [
     ],
     'header' => null, // blade path
     'footer' => [
-        'nav' => [
-            'https://t.me/totsamiyparen' => 'Связь с разработчиком',
-        ],
     ],
 ];
