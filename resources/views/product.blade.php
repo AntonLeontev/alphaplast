@@ -20,7 +20,7 @@
                         <div><span> Объем </span> {{ $product->volume }} мл</div>
                         <div><span> Высота </span> {{ $product->height }} мм</div>
                         <div><span> Вес </span> {{ $product->weight }} г</div>
-                    </div>`
+                    </div>
                     <div class="card__card">
                         <div>{{ $product->price }}</div>
                         <a href="">ДОБАВИТЬ В КОРЗИНУ</a>

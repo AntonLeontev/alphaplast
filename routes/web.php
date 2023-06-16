@@ -30,3 +30,4 @@ Route::get('news', [ArticleController::class, 'index'])->name('news');
 Route::get('news/{article:slug}', [ArticleController::class, 'show'])->name('articles.show');
 
 Route::get('product/{product}', [ProductController::class, 'show'])->name('products.show');
+Route::post('products/search', [ProductController::class, 'search']);
