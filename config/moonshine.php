@@ -8,7 +8,7 @@ return [
     'namespace' => 'App\MoonShine',
 
     'title' => env('MOONSHINE_TITLE', 'Альфапласт'),
-    'logo' => '/storage/images/logo-footer.png',
+    'logo' => '/images/logo-footer.png',
     'logo_small' => env('MOONSHINE_LOGO_SMALL'),
 
     'route' => [
