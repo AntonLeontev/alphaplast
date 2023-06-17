@@ -34,6 +34,9 @@ class MoonShineServiceProvider extends ServiceProvider
 				->icon('heroicons.envelope-open'),
 			
 			MenuDivider::make(), 
+
+			MenuItem::make('На сайт', fn() => route('home'))
+				->icon('heroicons.home'),
         ]);
     }
 }

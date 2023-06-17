@@ -28,6 +28,7 @@ Route::view('user-agreement', 'user-agreement')->name('user-agreement');
 Route::get('catalog', [CatalogController::class, 'index'])->name('catalog');
 Route::get('news', [ArticleController::class, 'index'])->name('news');
 Route::get('news/{article:slug}', [ArticleController::class, 'show'])->name('articles.show');
+Route::get('articles/section/{section}', [ArticleController::class, 'loadBySection']);
 
-Route::get('product/{product}', [ProductController::class, 'show'])->name('products.show');
+Route::get('products/{product}', [ProductController::class, 'show'])->name('products.show');
 Route::post('products/search', [ProductController::class, 'search']);

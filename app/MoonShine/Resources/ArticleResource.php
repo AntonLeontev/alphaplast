@@ -69,7 +69,11 @@ class ArticleResource extends Resource
 
 	public function rules(Model $item): array
 	{
-	    return [];
+	    return [
+			'title' => ['required', 'string', 'max:250'],
+			'thumbnail' => ['sometimes', 'image', 'max:6000'],
+			'description' => ['required', 'string', 'max:15000']
+		];
     }
 
     public function search(): array

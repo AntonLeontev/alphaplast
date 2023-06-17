@@ -11,7 +11,13 @@
                 </div>
                 <div class="card__wrapper">
                     <div class="card__img">
-                        <img src="/storage/{{ $product->thumbnail }}" alt="{{ $product->title }}">
+                        <img src="
+						@if (str_starts_with($product?->thumbnail, 'http'))
+							{{ $product?->thumbnail }}
+						@else
+							/storage/{{ $product?->thumbnail }}
+						@endif
+						" alt="{{ $product->title }}">
                     </div>
                     <div class="card__info">
                         <div><span> Артикул </span> {{ $product->part_number }}</div>

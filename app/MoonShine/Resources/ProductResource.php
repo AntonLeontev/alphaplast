@@ -27,7 +27,8 @@ class ProductResource extends Resource
 		return [
 		    ID::make()->sortable(),
 			Flex::make([
-				Text::make('Название', 'title'),
+				Text::make('Название', 'title')
+					->required(),
 				Slug::make('Slug')
 					->from('title')
 					->locked()
@@ -56,8 +57,9 @@ class ProductResource extends Resource
 				Number::make('Вес', 'weight')
 					->hideOnIndex()
 					->expansion('г'),
-				Text::make('Цена', 'price', fn($m) => $m->price->amount())
-					->expansion('₽'),
+				Text::make('Цена', 'price', fn($m) => $m->price?->amount())
+					->expansion('₽')
+					->required(),
 			]),
 			
         ];
