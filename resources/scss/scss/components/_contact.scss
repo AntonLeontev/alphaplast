@@ -130,7 +130,7 @@
         margin-bottom: 40px;
         position: relative;
         padding-left: 65px;
-          &::after {
+          &::after:nth-child(-n+3) {
             content: "";
   
             position: absolute;
