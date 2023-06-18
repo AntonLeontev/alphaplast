@@ -9,13 +9,14 @@ class CatalogController extends Controller
 {
     public function index(Request $request)
 	{
-		$diameters = Product::get('diameter')->pluck('diameter')->unique()->sort()->toArray();
-		$throatDiameters = Product::get('throat_diameter')->pluck('throat_diameter')->unique()->sort()->toArray();
-		$height = Product::get('height')->pluck('height')->unique()->sort()->toArray();
-		$volume = Product::get('volume')->pluck('volume')->unique()->sort()->toArray();
-		$weight = Product::get('weight')->pluck('weight')->unique()->sort()->toArray();
+		$products = Product::get();
+		$diameters = $products->pluck('diameter')->unique()->filter()->sort()->toArray();
+		$throatDiameters = $products->pluck('throat_diameter')->unique()->filter()->sort()->toArray();
+		$height = $products->pluck('height')->unique()->filter()->sort()->toArray();
+		$volume = $products->pluck('volume')->unique()->filter()->sort()->toArray();
+		$weight = $products->pluck('weight')->unique()->filter()->sort()->toArray();
 
-		$products = Product::with('category')
+		$products = Product::query()
 			->when($request->diameter !== null, function($query) use ($request) {
 				$query->where('diameter', $request->diameter);
 			})
