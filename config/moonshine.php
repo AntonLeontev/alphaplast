@@ -43,8 +43,6 @@ return [
         'footer' => '',
     ],
     'locales' => [
-        'en',
-        'ru',
     ],
     'middlewares' => [],
     'tinymce' => [
