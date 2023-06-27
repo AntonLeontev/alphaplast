@@ -92,32 +92,32 @@
             <h2>Выберите свой вариант упаковки вашей продукции</h2>
             <div class="row about-catalog__list">
                 <div class="col-md-6 col-lg-4 about-catalog__item">
-                    <img src="{{ Vite::asset('resources/images/about-img-1.png') }}" alt="">
+                    <img src="{{ Vite::asset('resources/images/card-section3-3.png') }}" alt="">
                     <h3>ПЭТ-бутылка</h3>
                     <a class="btn-hover" href="{{ route('catalog') }}">Смотреть</a>
                 </div>
                 <div class="col-md-6 col-lg-4 about-catalog__item">
-                    <img src="{{ Vite::asset('resources/images/about-img-2.png') }}" alt="">
+                    <img src="{{ Vite::asset('resources/images/card-section3-2.png') }}" alt="">
                     <h3>ПЭТ-банка</h3>
                     <a class="btn-hover" href="{{ route('catalog') }}">Смотреть</a>
                 </div>
-                <div class="col-md-6 col-lg-4 about-catalog__item" style="margin-top: 28px;">
-                    <img src="{{ Vite::asset('resources/images/about-img-3.png') }}" alt="">
+                <div class="col-md-6 col-lg-4 about-catalog__item">
+                    <img src="{{ Vite::asset('resources/images/card-section3-1.png') }}" alt="">
                     <h3>ПЭТ-Преформа для банок</h3>
                     <a class="btn-hover" href="{{ route('catalog') }}">Смотреть</a>
                 </div>
                 <div class="col-md-6 col-lg-4 about-catalog__item">
-                    <img src="{{ Vite::asset('resources/images/about-img-4.png') }}" alt="">
+                    <img src="{{ Vite::asset('resources/images/card-section3-5.png') }}" alt="">
                     <h3>ПЭТ-преформа</h3>
                     <a class="btn-hover" href="{{ route('catalog') }}">Смотреть</a>
                 </div>
                 <div class="col-md-6 col-lg-4 about-catalog__item">
-                    <img src="{{ Vite::asset('resources/images/about-img-5.png') }}" alt="">
+                    <img src="{{ Vite::asset('resources/images/card-section3-4.png') }}" alt="">
                     <h3>Крышки и колпачки</h3>
                     <a class="btn-hover" href="{{ route('catalog') }}">Смотреть</a>
                 </div>
                 <div class="col-md-6 col-lg-4 about-catalog__item">
-                    <img src="{{ Vite::asset('resources/images/about-img-6.png') }}" alt="">
+                    <img src="{{ Vite::asset('resources/images/card-section3-6.png') }}" alt="">
                     <h3>Индивидуальный заказ</h3>
                     <a class="btn-hover" href="{{ route('catalog') }}">Смотреть</a>
                 </div>

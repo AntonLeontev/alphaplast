@@ -55,14 +55,19 @@
             <div class="container">
                 <x-search />
 
-                <form class="d-flex flex-column flex-md-row justify-content-between align-items-center mb-2 gap-1">
-					<x-filter name="diameter" :param="$diameters" label="Диаметр" extend="мм" class="w-100 w-md-auto" />
-					<x-filter name="throat_diameter" :param="$throatDiameters" label="Горловина" extend="мм" class="w-100 w-md-auto" />
-					<x-filter name="height" :param="$height" label="Высота" extend="мм" class="w-100 w-md-auto" />
-					<x-filter name="weight" :param="$weight" label="Вес" extend="г" class="w-100 w-md-auto" />
-					<x-filter name="volume" :param="$volume" label="Объем" extend="мл" class="w-100 w-md-auto" />
+                <form class="">
+					<div class="d-flex flex-column flex-md-row justify-content-between align-items-center mb-2 gap-1">
+						<x-filter name="diameter" :param="$diameters" label="Диаметр" extend="мм" class="w-100 w-md-auto" />
+						<x-filter name="throat_diameter" :param="$throatDiameters" label="Горловина" extend="мм" class="w-100 w-md-auto" />
+						<x-filter name="height" :param="$height" label="Высота" extend="мм" class="w-100 w-md-auto" />
+						<x-filter name="weight" :param="$weight" label="Вес" extend="г" class="w-100 w-md-auto" />
+						<x-filter name="volume" :param="$volume" label="Объем" extend="мл" class="w-100 w-md-auto" />
+					</div>
 
-					<button type="submit" class="filter__btn mt-2 mt-md-0 px-2">Подобрать</button>
+					<div>
+
+						<button type="submit" class="filter__btn mt-2 mt-md-0 px-2">Подобрать</button>
+					</div>
 				</form>
 				<form class="d-flex justify-content-end">
 					<button type="button" class="filter__btn-1">Сбросить фильтр</button>

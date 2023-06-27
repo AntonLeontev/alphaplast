@@ -25,6 +25,7 @@
 @import "./scss/components/news";
 @import "./scss/components/card";
 @import "./scss/components/post";
+@import "./scss/components/animate";
 // @import "./scss/components/our-team";
 // @import "./scss/components/mat-cap";
 // @import "./scss/components/developments";
@@ -36,7 +37,8 @@
 // @import "./scss/components/map";
 // @import "./scss/components/modal";
 @import "./scss/components/footer";
-@import "./scss/standard";  
+@import "./scss/standard"; 
+@import "../css/animate.min.css"; 
 
 
 
