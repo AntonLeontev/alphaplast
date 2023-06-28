@@ -14,5 +14,5 @@
     <ul>
         <li class="me-2">Артикул: {{ $product->part_number }}</li>
     </ul>
-	<span href="card-1.html">{{ $product->price }}</span>
+	<span href="card-1.html">Подробнее</span>
 </a>

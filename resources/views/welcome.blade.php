@@ -125,7 +125,7 @@
                         </picture>
                         <div class="">
                             <h3 class="teachers__card-title">Банки</h3>
-                            <a class="btn-hover" href="{{ route('catalog') }}">Смотреть</a>
+                            <a class="btn-hover" href="{{ route('catalog') }}?category=banki">Смотреть</a>
                         </div>
                     </div>
                     <div class="pb-4 col-lg-4 teachers__card wow fadeInUp">
@@ -134,7 +134,7 @@
                         </picture>
                         <div class="">
                             <h3 class="teachers__card-title">Бутылки</h3>
-                            <a class="btn-hover" href="{{ route('catalog') }}">Смотреть</a>
+                            <a class="btn-hover" href="{{ route('catalog') }}?category=butilki">Смотреть</a>
                         </div>
                     </div>
                     <div class="pb-4 col-lg-4 teachers__card wow fadeInUp">
@@ -143,7 +143,7 @@
                         </picture>
                         <div class="">
                             <h3 class="teachers__card-title">Крышки</h3>
-                            <a class="btn-hover" href="{{ route('catalog') }}">Смотреть</a>
+                            <a class="btn-hover" href="{{ route('catalog') }}?category=krishki">Смотреть</a>
                         </div>
                     </div>
                     <div class="pb-4 col-lg-4 teachers__card wow fadeInUp">
@@ -152,7 +152,7 @@
                         </picture>
                         <div class="">
                             <h3 class="teachers__card-title">Преформы</h3>
-                            <a class="btn-hover" href="{{ route('catalog') }}">Смотреть</a>
+                            <a class="btn-hover" href="{{ route('catalog') }}?category=preformi">Смотреть</a>
                         </div>
                     </div>
 					<div class="pb-4 col-lg-4 teachers__card wow fadeInUp">
@@ -161,7 +161,7 @@
                         </picture>
                         <div class="">
                             <h3 class="teachers__card-title">Пресс-формы</h3>
-                            <a class="btn-hover" href="{{ route('catalog') }}">Смотреть</a>
+                            <a class="btn-hover" href="{{ route('catalog') }}?category=press-formi">Смотреть</a>
                         </div>
                     </div>
                 </div>
@@ -249,7 +249,7 @@
 	<section class="price" id="section3">
         <div class="container">
             <h2 class="wow fadeInUp">О КОМПАНИИ</h2>
-            <p class="wow fadeInUp">ПЭТ-тара от «Альфапласт» - совершенство в деталях 15 лет производим ПЭТ-упаковку для вас</p>
+            <p class="wow fadeInUp">ПЭТ-тара от «Альфапласт» - совершенство в деталях<br>15 лет производим ПЭТ-упаковку для вас</p>
             <div class="price__wrapp">
                 <div class="price__list wow fadeInUp">
                     <ul>

@@ -24,17 +24,18 @@
                     
                 </div>
                 <ul class="catalog-hero__list">
-                    <li><button type="button" class="btn__item" data-id="1">банки</button></li>
-                    <li><button type="button" class="btn__item" data-id="2">БУТЫЛКИ</button></li>
-                    <li><button type="button" class="btn__item" data-id="3">ПРЕФОРМЫ</button></li>
-                    <li><button type="button" class="btn__item" data-id="4">ПЭТ-Преформа для банок</button></li>
-                    <li><button type="button" class="btn__item" data-id="5">ПРЕСС-ФОРМЫ</button></li>
-                    <li><button type="button" class="btn__item" data-id="6">КРЫШКИ</button></li>
+                    <li><button type="button" class="btn__item" data-id="banki">банки</button></li>
+                    <li><button type="button" class="btn__item" data-id="butilki">БУТЫЛКИ</button></li>
+                    <li><button type="button" class="btn__item" data-id="preformi">ПРЕФОРМЫ</button></li>
+                    <li><button type="button" class="btn__item" data-id="pet-preforma">ПЭТ-Преформа для банок</button></li>
+                    <li><button type="button" class="btn__item" data-id="press-formi">ПРЕСС-ФОРМЫ</button></li>
+                    <li><button type="button" class="btn__item" data-id="krishki">КРЫШКИ</button></li>
                 </ul>
                 <div class="catalog-hero__filter-wrapp">
                     <x-search />
 					
                     <form class="d-flex justify-content-between align-items-center">
+						<input type="hidden" name="category" id="category-input">
 						<x-filter name="diameter" :param="$diameters" label="Диаметр" extend="мм" />
 						<x-filter name="throat_diameter" :param="$throatDiameters" label="Горловина" extend="мм" />
 						<x-filter name="height" :param="$height" label="Высота" extend="мм" />
@@ -76,7 +77,7 @@
             </div>
         </section>
 
-        <section class="catalog-content catalog-content1" id="1">
+        <section class="catalog-content catalog-contentbanki" id="banki">
             <div class="container">
                 <h2>банки</h2>
 				@empty($products["1"])
@@ -90,7 +91,7 @@
 				@endempty
             </div>
         </section>
-        <section class="catalog-content catalog-content2 d-none" id="2">
+        <section class="catalog-content catalog-contentbutilki d-none" id="butilki">
             <div class="container">
                 <h2>БУТЫЛКИ</h2>
 				@empty($products["2"])
@@ -105,7 +106,7 @@
             </div>
         </section>
 
-        <section class="catalog-content catalog-content3 d-none" id="3">
+        <section class="catalog-content catalog-contentpreformi d-none" id="preformi">
             <div class="container">
                 <h2>ПРЕФОРМЫ</h2>
                @empty($products["3"])
@@ -120,7 +121,7 @@
             </div>
         </section>
 
-        <section class="catalog-content catalog-content4 d-none" id="4">
+        <section class="catalog-content catalog-contentpet-preforma d-none" id="pet-preforma">
             <div class="container">
                 <h2>ПЭТ-Преформа для банок</h2>
                 @empty($products["4"])
@@ -135,7 +136,7 @@
             </div>
         </section>
 
-        <section class="catalog-content catalog-content5 d-none" id="5">
+        <section class="catalog-content catalog-contentpress-formi d-none" id="press-formi">
             <div class="container">
                 <h2>пресс-формы</h2>
                 @empty($products["5"])
@@ -150,7 +151,7 @@
             </div>
         </section>
 
-        <section class="catalog-content catalog-content6 d-none" id="6">
+        <section class="catalog-content catalog-contentkrishki d-none" id="krishki">
             <div class="container">
                 <h2>КРЫШКИ</h2>
                @empty($products["6"])

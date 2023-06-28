@@ -95,6 +95,18 @@ document.addEventListener("DOMContentLoaded", () => {
             prevEl: ".swiper-button-reviews-prev",
         },
     });
+
+	const urlParams = new URLSearchParams(window.location.search);
+	const category = urlParams.get('category');
+
+	if (category) {
+		showCategory(category);
+
+		const input = document.getElementById("category-input");
+        if (input) {
+            input.value = category;
+        } 
+	}
 });
 
 async function closeModal(selector) {
@@ -111,12 +123,12 @@ async function openModal(selector) {
 document.querySelectorAll(".btn__item").forEach((el) => {
     el.addEventListener("click", (event) => {
         let id = event.target.dataset.id;
-        document
-            .querySelectorAll(".catalog-content")
-            .forEach((el) => el.classList.add("d-none"));
-        document
-            .querySelector(`.catalog-content${id}`)
-            .classList.remove("d-none");
+        showCategory(id);
+
+		const input = document.getElementById('category-input');
+		if (input) {
+			input.value = id;
+		} 
     });
 });
 document.querySelectorAll(".select__item").forEach((el) => {
@@ -131,3 +143,10 @@ document.querySelectorAll(".select__item").forEach((el) => {
             .classList.remove("d-none");
     });
 });
+
+function showCategory(id) {
+	document
+        .querySelectorAll(".catalog-content")
+        .forEach((el) => el.classList.add("d-none"));
+    document.querySelector(`.catalog-content${id}`).classList.remove("d-none");
+}
