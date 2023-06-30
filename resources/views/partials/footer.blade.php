@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="d-md-flex justify-content-between align-items-center align-items-lg-start">
 			<div class="footer__block-1">
-				<a href="index.html">
+				<a href="{{ route('home') }}">
 					<img src="{{ Vite::asset('resources/images/logo-footer.png') }}" alt="">
 				</a>
 				<p class="footer__text">

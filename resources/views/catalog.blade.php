@@ -11,12 +11,12 @@
                     <input class="select__input" type="hidden" name="">
                     <div class="select__head">ВСЯ ПРОДУКЦИЯ</div>
                     <ul class="select__list">
-                        <li class="select__item" data-id="1">банки</li>
-                        <li class="select__item" data-id="2">БУТЫЛКИ</li>
-                        <li class="select__item" data-id="3">ПРЕФОРМЫ</li>
-                        <li class="select__item" data-id="4">ПЭТ-Преформа для банок</li>
-                        <li class="select__item" data-id="5">ПРЕСС-ФОРМЫ</li>
-                        <li class="select__item" data-id="6">КРЫШКИ</li>
+                        <li class="select__item" data-id="banki">банки</li>
+                        <li class="select__item" data-id="butilki">БУТЫЛКИ</li>
+                        <li class="select__item" data-id="preformi">ПРЕФОРМЫ</li>
+                        <li class="select__item" data-id="pet-preforma">ПЭТ-Преформа для банок</li>
+                        <li class="select__item" data-id="press-formi">ПРЕСС-ФОРМЫ</li>
+                        <li class="select__item" data-id="krishki">КРЫШКИ</li>
                     </ul>
                 </div>
                 <button type="button" class="catalog-hero__filter-btn">фильтр</button>

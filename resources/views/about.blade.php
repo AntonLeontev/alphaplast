@@ -104,12 +104,12 @@
                 <div class="col-md-6 col-lg-4 about-catalog__item">
                     <img src="{{ Vite::asset('resources/images/card-section3-1.png') }}" alt="">
                     <h3>ПЭТ-Преформа</h3>
-                    <a class="btn-hover" href="{{ route('catalog') }}?category=pet-preforma">Смотреть</a>
+                    <a class="btn-hover" href="{{ route('catalog') }}?category=preformi">Смотреть</a>
                 </div>
                 <div class="col-md-6 col-lg-4 about-catalog__item">
                     <img src="{{ Vite::asset('resources/images/card-section3-5.png') }}" alt="">
-                    <h3>преформа</h3>
-                    <a class="btn-hover" href="{{ route('catalog') }}?category=preformi">Смотреть</a>
+                    <h3>пресс-форма</h3>
+                    <a class="btn-hover" href="{{ route('catalog') }}?category=press-formi">Смотреть</a>
                 </div>
                 <div class="col-md-6 col-lg-4 about-catalog__item">
                     <img src="{{ Vite::asset('resources/images/card-section3-4.png') }}" alt="">
@@ -119,7 +119,7 @@
                 <div class="col-md-6 col-lg-4 about-catalog__item">
                     <img src="{{ Vite::asset('resources/images/card-section3-6.png') }}" alt="">
                     <h3>Индивидуальный заказ</h3>
-                    <a class="btn-hover" href="{{ route('catalog') }}?category=press-formi">Смотреть</a>
+                    <a class="btn-hover">Смотреть</a>
                 </div>
             </div>
             <div class="robots__wrapp">
@@ -137,10 +137,5 @@
         </div>
     </section>
 
-    <section class="about-number">
-        <div class="container">
-            <h2>Сертификаты</h2>
-        </div>
-    </section>
 </main>
 @endsection

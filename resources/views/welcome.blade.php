@@ -38,49 +38,49 @@
                     <div class="swiper-slide">
                         <div class="advantages__card" style="background-image: url({{ Vite::asset('resources/images/card-section2-2.png') }})">
                             <h3>Кондитерские изделия</h3>
-                            <p>ПЭТ- флаконы и баночки для косметики – удобное и практичное решение для продажи, хранения и транспортировки косметики: крем, гель для душа, шампунь, лосьон, праймер и других видов.</p>
+                            <p>ПЭТ – упаковка для пищевых продуктов производится из пищевого пластика и имеет различные размеры и объёмы для удобной фасовки изделий: конфеты, мармелад, зефир и других видов.</p>
                             <a class="btn-hover" href="{{ route('catalog') }}">ПОДРОБНЕЕ</a>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="advantages__card" style="background-image: url({{ Vite::asset('resources/images/card-section2-3.png') }})">
                             <h3>Напитки и еда</h3>
-                            <p>ПЭТ- флаконы и баночки для косметики – удобное и практичное решение для продажи, хранения и транспортировки косметики: крем, гель для душа, шампунь, лосьон, праймер и других видов.</p>
+                            <p>ПЭТ - бутылки для напитков производятся в различных цветах и размерах, которые удобны как для производителя, так и для потребителя продукта.</p>
                             <a class="btn-hover" href="{{ route('catalog') }}">ПОДРОБНЕЕ</a>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="advantages__card" style="background-image: url({{ Vite::asset('resources/images/card-section2-4.png') }})">
                             <h3>Бытовая химия</h3>
-                            <p>ПЭТ- флаконы и баночки для косметики – удобное и практичное решение для продажи, хранения и транспортировки косметики: крем, гель для душа, шампунь, лосьон, праймер и других видов.</p>
+                            <p>Специальный состав ПЭТ – тары безопасен для здоровья, не вступает в реакцию с содержимым и надёжно защищает его. Тара для хранения химикатов производится в удобных объёмах и формах.</p>
                             <a class="btn-hover" href="{{ route('catalog') }}">ПОДРОБНЕЕ</a>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="advantages__card" style="background-image: url({{ Vite::asset('resources/images/card-section2-5.png') }})">
                             <h3>Фармацевтика</h3>
-                            <p>ПЭТ- флаконы и баночки для косметики – удобное и практичное решение для продажи, хранения и транспортировки косметики: крем, гель для душа, шампунь, лосьон, праймер и других видов.</p>
+                            <p>ПЭТ – флаконы для фармацевтической и медицинской продукции, а также БАД, - это отдельная серия упаковки специально выверенных размеров, оснащенная крышечкой. Удобно использовать для: таблеток, капсул, порошков и других видов.</p>
                             <a class="btn-hover" href="{{ route('catalog') }}">ПОДРОБНЕЕ</a>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="advantages__card" style="background-image: url({{ Vite::asset('resources/images/card-section2-6.png') }})">
                             <h3>Игрушки из мелких деталей</h3>
-                            <p>ПЭТ- флаконы и баночки для косметики – удобное и практичное решение для продажи, хранения и транспортировки косметики: крем, гель для душа, шампунь, лосьон, праймер и других видов.</p>
+                            <p>ПЭТ – банки из прозрачного пластика с закручивающейся крышкой разработаны специально для упаковки детских игрушек, в составе которых есть мелкие детали: конструкторы, пазлы и другие.</p>
                             <a class="btn-hover" href="{{ route('catalog') }}">ПОДРОБНЕЕ</a>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="advantages__card" style="background-image: url({{ Vite::asset('resources/images/card-section2-7.png') }})">
                             <h3>Спортивное питание</h3>
-                            <p>ПЭТ- флаконы и баночки для косметики – удобное и практичное решение для продажи, хранения и транспортировки косметики: крем, гель для душа, шампунь, лосьон, праймер и других видов.</p>
+                            <p>Большие ПЭТ – банки пользуются популярностью в сфере спортивного питания. Их используют для упаковки сыпучей продукции или для замешивания спортивных коктейлей, например, протеин в банке, гейнеры и т.д.</p>
                             <a class="btn-hover" href="{{ route('catalog') }}">ПОДРОБНЕЕ</a>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="advantages__card" style="background-image: url({{ Vite::asset('resources/images/card-section2-8.png') }})">
                             <h3>Ваша сфера деятельности</h3>
-                            <p>ПЭТ- флаконы и баночки для косметики – удобное и практичное решение для продажи, хранения и транспортировки косметики: крем, гель для душа, шампунь, лосьон, праймер и других видов.</p>
+                            <p>ПЭТ – упаковка по вашему индивидуальному запросу изготавливается в течение нескольких дней. Мы создаём прозрачную и цветную продукцию, любой размер, а также можем делать любой рельеф на поверхности изделия (например, логотип вашей компании). </p>
                             <a class="btn-hover" href="{{ route('catalog') }}">ПОДРОБНЕЕ</a>
                         </div>
                     </div>
@@ -108,7 +108,7 @@
 
         <section class="teachers" id="section2">
             <div class="container">
-                <h2 class="teachers__title wow fadeInUp">Каталог с категориями товаров</h2>
+                <h2 class="teachers__title wow fadeInUp">Каталог</h2>
                 <div class="teachers__wrap row gy-4 justify-content-center justify-content-lg-between">
                     <div class="pb-4 col-lg-4 teachers__card wow fadeInUp">
                         <picture>
@@ -259,7 +259,7 @@
                         <li>Воплощаем любые ваши идеи</li>
                         <li>Высокие стандарты качества</li>
                     </ul>
-                    <a href="#" class="btn-hover">О КОМПАНИИ</a>
+                    <a href="{{ route('about') }}" class="btn-hover">О КОМПАНИИ</a>
                 </div>
                 <div class="price__img wow fadeInUp">
                     <img class="" src="{{ Vite::asset('resources/images/card-section5-1.jpg') }}" alt="">
@@ -301,13 +301,13 @@
                 <h3>Закажите продукцию компании в маленьком объёме. Напишите нам желаемые объёмы заказа и номер продукции. <br>Мы проконсультируем вас.</h3>
                 <form action="#" class="free-feedback__form">
                     <div>
-                        <input type="text" class="form-control" placeholder="Ваше имя">
+                        <input type="text" name="name" class="form-control" placeholder="Ваше имя">
                     </div>
                     <div>
-                        <input type="text" class="form-control" placeholder="Номер телефона">
+                        <input type="text" name="phone" class="form-control" placeholder="Номер телефона">
                     </div>
                     <div>
-                        <input type="text" class="form-control" placeholder="Опишите ваш заказ">
+                        <input type="text" name="description" class="form-control" placeholder="Опишите ваш заказ">
                     </div>
                     <div class="text-center">
                         <a href="https://www.ozon.ru/seller/alfaplast-600322/products/?miniapp=seller_600322" style="color: #fff; text-decoration: underline;">Закажите нашу тару на Озон</a>

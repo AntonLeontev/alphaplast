@@ -9,6 +9,8 @@
                 <div class="post__btn-wrapper">
 					@if ($prevArticle !== null)
                     	<a class="post__btn post__btn-prev" href="{{ route('articles.show', $prevArticle->slug) }}">предыдущая новость</a>
+					@else
+						<span></span>					
 					@endif
 					@if ($nextArticle !== null)
 						<a class="post__btn post__btn-next" href="{{ route('articles.show', $nextArticle->slug) }}">Следующая новость</a>

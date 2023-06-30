@@ -25,7 +25,7 @@ class ArticleController extends Controller
 
 		$nextArticle = Article::where('is_published', 1)
 			->where('created_at', '>', $article->created_at)
-			->orderByDesc('created_at')
+			->orderBy('created_at')
 			->first();
 		
 		return view('article', compact('article', 'prevArticle', 'nextArticle'));

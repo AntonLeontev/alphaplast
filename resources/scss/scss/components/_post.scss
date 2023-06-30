@@ -167,10 +167,10 @@
         }
         &__btn-wrapper {
             margin-bottom: 32px;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
+            display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-rows: 1fr;
+			align-items: center;
         }
         &__btn {
             position: relative  ;
@@ -191,7 +191,7 @@
     
             background: #5934C2;
             border-radius: 15px;
-            margin-bottom: 14px;
+            margin-bottom: 0;
             &::after {
                 content: "";
                 position: absolute;
@@ -206,6 +206,7 @@
             &-prev {
                 order: 1;
                 padding-left: 70px;
+				justify-self: start;
                 &::after {
                     top: 18px;
                     left: 27px;
@@ -216,6 +217,7 @@
             &-next {
                 order: 3;
                 padding-right: 70px;
+				justify-self: end;
                 &::after {
                     top: 18px;
                     right: 29px;
@@ -228,6 +230,7 @@
                 font-weight: 600;
                 font-size: 16px;
                 line-height: 123.7%;
+				justify-self: center;
                 /* identical to box height, or 20px */
     
                 text-decoration-line: underline;

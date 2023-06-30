@@ -5,6 +5,7 @@
 		type="text" 
 		placeholder="Поиск по названию или артикулу"
 		x-model="search"
+		autocomplete="off"
 		@input="getProducts"
 	>
 	<div class="search__pad top-100 z-3 w-100 mt-1" x-show="show" x-on:click.outside="hide">
@@ -33,10 +34,10 @@
 			products: [],
 			show: false,
 			getProducts() {
-				if (this.search.length < 3) {
-					this.hide();
-					return;
-				};
+				// if (this.search.length < 3) {
+				// 	this.hide();
+				// 	return;
+				// };
 
 				axios
 					.post('/products/search', {search: this.search})
