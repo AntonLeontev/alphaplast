@@ -40,7 +40,7 @@ Route::post('/send-form', function() {
 		return response()->json('no data', 422);
 	}
 
-	Mail::to('aner-anton@ya.ru')->send(new NewOrder());
+	Mail::to(contacts()->email)->send(new NewOrder());
 
 	return response()->json('ok');
 });
