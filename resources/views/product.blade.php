@@ -43,17 +43,18 @@
                     <h3>Оставьте свои контакты, мы с вами свяжемся для обсуждения деталей </h3>
                     <form action="">
                         <div>
-                            <input type="text" class="form-control" placeholder="Ваше имя">
+                            <input name="name" type="text" class="form-control" placeholder="Ваше имя">
                         </div>
-                        <div>
-                            <input type="text" class="form-control" placeholder="Номер телефона">
+                        <div x-data>
+                            <input name="phone" type="text" class="form-control" placeholder="Номер телефона"
+                                x-mask="8 999 999-99-99">
                         </div>
                         <div class="mb-4">
-                            <input type="text" class="form-control" placeholder="Email">
+                            <input name="email" type="text" class="form-control" placeholder="Email">
                         </div>
                         <div class="d-flex flex-column mt-4">
-                            <button type="button" class="btn btn-primary mb-2" data-bs-toggle="modal"
-                                data-bs-dismiss="modal" data-bs-target="#myModal-2">Отправить</button>
+                            <button type="submit" class="btn btn-primary submit-btn mb-2" data-bs-toggle="modal"
+                                data-bs-dismiss="modal">Отправить</button>
                         </div>
                     </form>
                 </div>
@@ -69,7 +70,8 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content modal-fb">
                 <div class="w-100 d-flex justify-content-end p-2">
-                    <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close bg-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
                 </div>
                 <div class="h1 p-5 text-center text-white">
                     Спасибо заявка отправлена
@@ -77,4 +79,31 @@
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
+@endsection
+
+@section('body-scripts')
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+		document.querySelectorAll('.submit-btn')
+		.forEach(el => {
+		el.addEventListener('click', sendForm);
+		});
+
+		const thanksModal = new bootstrap.Modal('#myModal-2');
+
+		function sendForm(event) {
+		event.preventDefault();
+
+		const form = event.target.closest('form');
+		let data = new FormData(form);
+
+		axios
+			.post('/send-form', data)
+			.then(response => {
+				console.log(response.data);
+				thanksModal.show();
+			})
+		}
+    })
+</script>
 @endsection

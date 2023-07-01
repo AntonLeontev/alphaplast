@@ -5,6 +5,8 @@ use App\Http\Controllers\CatalogController;
 use App\Http\Controllers\ContactsController;
 use App\Http\Controllers\HomePageController;
 use App\Http\Controllers\ProductController;
+use App\Mail\NewOrder;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,3 +34,13 @@ Route::get('articles/section/{section}', [ArticleController::class, 'loadBySecti
 
 Route::get('products/{product}', [ProductController::class, 'show'])->name('products.show');
 Route::post('products/search', [ProductController::class, 'search']);
+
+Route::post('/send-form', function() {
+	if (empty(request()->phone) && empty(request()->email)) {
+		return response()->json('no data', 422);
+	}
+
+	Mail::to('aner-anton@ya.ru')->send(new NewOrder());
+
+	return response()->json('ok');
+});

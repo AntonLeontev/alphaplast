@@ -12,6 +12,7 @@
         "vite": "^4.0.0"
     },
     "dependencies": {
+        "@alpinejs/mask": "^3.12.2",
         "@popperjs/core": "^2.11.8",
         "alpinejs": "^3.12.2",
         "bootstrap": "^5.3.0",

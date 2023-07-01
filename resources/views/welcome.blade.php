@@ -299,20 +299,21 @@
 
             <div class="free-feedback__wrapp wow fadeInUp">
                 <h3>Закажите продукцию компании в маленьком объёме. Напишите нам желаемые объёмы заказа и номер продукции. <br>Мы проконсультируем вас.</h3>
-                <form action="#" class="free-feedback__form">
+                <form action="" class="free-feedback__form">
+					@csrf
                     <div>
                         <input type="text" name="name" class="form-control" placeholder="Ваше имя">
                     </div>
-                    <div>
-                        <input type="text" name="phone" class="form-control" placeholder="Номер телефона">
-                    </div>
+                    	<div x-data>
+                            <input name="phone" type="text" class="form-control" placeholder="Номер телефона" x-mask="8 999 999-99-99">
+                        </div>
                     <div>
                         <input type="text" name="description" class="form-control" placeholder="Опишите ваш заказ">
                     </div>
                     <div class="text-center">
                         <a href="https://www.ozon.ru/seller/alfaplast-600322/products/?miniapp=seller_600322" style="color: #fff; text-decoration: underline;">Закажите нашу тару на Озон</a>
                     </div>
-                    <button class="btn-hover">Заказать</button>
+                    <button type="submit" class="btn-hover submit-btn" data-bs-toggle="modal">Заказать</button>
                 </form>
             </div>
         </div>
@@ -326,16 +327,16 @@
                     <h3>Оставьте свои контакты, мы с вами свяжемся для обсуждения деталей </h3>
                     <form action="">
                         <div>
-                            <input type="text" class="form-control" placeholder="Ваше имя">
+                            <input name="name" type="text" class="form-control" placeholder="Ваше имя">
                         </div>
-                        <div>
-                            <input type="text" class="form-control" placeholder="Номер телефона">
+                        <div x-data>
+                            <input name="phone" type="text" class="form-control" placeholder="Номер телефона" x-mask="8 999 999-99-99">
                         </div>
                         <div class="mb-4">
-                            <input type="text" class="form-control" placeholder="Email">
+                            <input name="email" type="text" class="form-control" placeholder="Email">
                         </div>
                         <div class="d-flex flex-column mt-4">
-                            <button type="button" class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#myModal-2" >Отправить</button>
+                            <button type="submit" class="btn btn-primary mb-2 submit-btn" data-bs-toggle="modal" data-bs-dismiss="modal">Отправить</button>
                         </div>
                     </form>
                 </div>
@@ -429,6 +430,30 @@
 		function isEndOfPage() {
 			return (window.innerHeight + window.scrollY) >= document.body.offsetHeight;
 		}
+
+		document.addEventListener('DOMContentLoaded', () => {
+			document.querySelectorAll('.submit-btn')
+				.forEach(el => {
+					el.addEventListener('click', sendForm);
+				});
+	
+			const thanksModal = new bootstrap.Modal('#myModal-2');
+	
+			function sendForm(event) {
+				event.preventDefault();
+				
+				const form = event.target.closest('form');
+				let data = new FormData(form);
+	
+				axios
+					.post('/send-form', data)
+					.then(response => {
+						console.log(response.data);
+						thanksModal.show();
+					})
+			}
+		})
+
 
 	</script>
 @endsection
