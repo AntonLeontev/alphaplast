@@ -16,7 +16,7 @@
 					</picture>
 					<div class="schedule__item-wrapp">
 						<h3 x-text="article.title"></h3>
-						<p x-text="article.description_short"></p>
+						<p x-html="article.description_short"></p>
 						<a :href="'/news/' + article.slug">читать</a>
 					</div>
 				</div>
