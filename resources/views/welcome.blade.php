@@ -17,7 +17,7 @@
                 <li>Крышка и колпачок</li>
                 <li>Индивидуальный заказ</li>
             </ul>
-            <a href="#free-feedback" type="button" class="hero__btn btn-hover wow fadeInUp">Связатся с нами</a>
+            <a href="#free-feedback" type="button" class="hero__btn btn-hover wow fadeInUp" onclick="ym(Код,'reachGoal','btn_contact'); return true;">Связатся с нами</a>
         </div>
     </section>
 
@@ -173,7 +173,9 @@
             <div class="robots__wrapp robots__wrapp-bg wow fadeInUp">
                 <div class="robots__block-1 robots__block-1-100 ">
                     <p class="wow fadeInUp">Не нашли подходящей модели?<br> Закажите индивидуальную разработку по собственному эскизу!</p>
-                    <a class="robots__block-1-a btn-hover wow fadeInUp" href="#" data-bs-toggle="modal" data-bs-target="#myModal">Заказать разработку</a>
+                    <a class="robots__block-1-a btn-hover wow fadeInUp" href="#" data-bs-toggle="modal" data-bs-target="#myModal" onclick="ym(27541782,'reachGoal','btn_razrab'); return true;">
+						Заказать разработку
+					</a>
                 </div>
             </div>
         </div>
@@ -299,7 +301,7 @@
 
             <div class="free-feedback__wrapp wow fadeInUp">
                 <h3>Закажите продукцию компании в маленьком объёме. Напишите нам желаемые объёмы заказа и номер продукции. <br>Мы проконсультируем вас.</h3>
-                <form action="" class="free-feedback__form">
+                <form action="" class="free-feedback__form" onsubmit="ym(27541782,'reachGoal','form_order_contact'); return true;">
 					@csrf
                     <div>
                         <input type="text" name="name" class="form-control" placeholder="Ваше имя">
@@ -311,7 +313,13 @@
                         <input type="text" name="description" class="form-control" placeholder="Опишите ваш заказ">
                     </div>
                     <div class="text-center">
-                        <a href="https://www.ozon.ru/seller/alfaplast-600322/products/?miniapp=seller_600322" style="color: #fff; text-decoration: underline;">Закажите нашу тару на Озон</a>
+                        <a 
+							href="https://www.ozon.ru/seller/alfaplast-600322/products/?miniapp=seller_600322" 
+							style="color: #fff; text-decoration: underline;"
+							onclick="ym(27541782,'reachGoal','btn_order_ozon'); return true;"
+						>
+							Закажите нашу тару на Озон
+						</a>
                     </div>
                     <button type="submit" class="btn-hover submit-btn" data-bs-toggle="modal">Заказать</button>
                 </form>
@@ -325,7 +333,7 @@
             <div class="modal-content modal-fb ">
                 <div class="p-2 mw-50">
                     <h3>Оставьте свои контакты, мы с вами свяжемся для обсуждения деталей </h3>
-                    <form action="">
+                    <form action="" onsubmit="ym(27541782,'reachGoal','form_order_main'); return true;">
                         <div>
                             <input name="name" type="text" class="form-control" placeholder="Ваше имя">
                         </div>

@@ -11,12 +11,12 @@
                     <input class="select__input" type="hidden" name="">
                     <div class="select__head">ВСЯ ПРОДУКЦИЯ</div>
                     <ul class="select__list">
-                        <li class="select__item" data-id="banki">банки</li>
-                        <li class="select__item" data-id="butilki">БУТЫЛКИ</li>
-                        <li class="select__item" data-id="preformi">ПРЕФОРМЫ</li>
-                        <li class="select__item" data-id="pet-preforma">ПЭТ-Преформа для банок</li>
-                        <li class="select__item" data-id="press-formi">ПРЕСС-ФОРМЫ</li>
-                        <li class="select__item" data-id="krishki">КРЫШКИ</li>
+                        <li class="select__item" data-id="banki" onclick="ym(27541782,'reachGoal','ret_banki'); return true;">банки</li>
+                        <li class="select__item" data-id="butilki" onclick="ym(27541782,'reachGoal','ret_butylki'); return true;">БУТЫЛКИ</li>
+                        <li class="select__item" data-id="preformi" onclick="ym(27541782,'reachGoal','ret_preformy'); return true;">ПРЕФОРМЫ</li>
+                        <li class="select__item" data-id="pet-preforma" onclick="ym(27541782,'reachGoal','ret_preform_banki'); return true;">ПЭТ-Преформа для банок</li>
+                        <li class="select__item" data-id="press-formi" onclick="ym(27541782,'reachGoal','ret_pressformy'); return true;">ПРЕСС-ФОРМЫ</li>
+                        <li class="select__item" data-id="krishki" onclick="ym(27541782,'reachGoal','ret_kryshki'); return true;">КРЫШКИ</li>
                     </ul>
                 </div>
                 <button type="button" class="catalog-hero__filter-btn">фильтр</button>
@@ -24,12 +24,12 @@
                     
                 </div>
                 <ul class="catalog-hero__list">
-                    <li><button type="button" class="btn__item" data-id="banki">банки</button></li>
-                    <li><button type="button" class="btn__item" data-id="butilki">БУТЫЛКИ</button></li>
-                    <li><button type="button" class="btn__item" data-id="preformi">ПРЕФОРМЫ</button></li>
-                    <li><button type="button" class="btn__item" data-id="pet-preforma">ПЭТ-Преформа для банок</button></li>
-                    <li><button type="button" class="btn__item" data-id="press-formi">ПРЕСС-ФОРМЫ</button></li>
-                    <li><button type="button" class="btn__item" data-id="krishki">КРЫШКИ</button></li>
+                    <li><button type="button" class="btn__item" data-id="banki" onclick="ym(27541782,'reachGoal','ret_banki'); return true;">банки</button></li>
+                    <li><button type="button" class="btn__item" data-id="butilki" onclick="ym(27541782,'reachGoal','ret_butylki'); return true;">БУТЫЛКИ</button></li>
+                    <li><button type="button" class="btn__item" data-id="preformi" onclick="ym(27541782,'reachGoal','ret_preformy'); return true;">ПРЕФОРМЫ</button></li>
+                    <li><button type="button" class="btn__item" data-id="pet-preforma" onclick="ym(27541782,'reachGoal','ret_preform_banki'); return true;">ПЭТ-Преформа для банок</button></li>
+                    <li><button type="button" class="btn__item" data-id="press-formi" onclick="ym(27541782,'reachGoal','ret_pressformy'); return true;">ПРЕСС-ФОРМЫ</button></li>
+                    <li><button type="button" class="btn__item" data-id="krishki" onclick="ym(27541782,'reachGoal','ret_kryshki'); return true;">КРЫШКИ</button></li>
                 </ul>
                 <div class="catalog-hero__filter-wrapp">
                     <x-search />
@@ -42,7 +42,7 @@
 						<x-filter name="weight" :param="$weight" label="Вес" extend="г" />
 						<x-filter name="volume" :param="$volume" label="Объем" extend="мл" />
                         
-                        <button type="submit" class="filter__btn" style=" background-color: #5934C2; color: #fff;">Подобрать</button>
+                        <button type="submit" class="filter__btn" style=" background-color: #5934C2; color: #fff;" onclick="ym(27541782,'reachGoal','btn_choose'); return true;">Подобрать</button>
                     </form>
                     <div class="mt-3 mb-3 text-end">
 						<form>
