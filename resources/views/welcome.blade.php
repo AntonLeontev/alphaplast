@@ -317,6 +317,7 @@
 							href="https://www.ozon.ru/seller/alfaplast-600322/products/?miniapp=seller_600322" 
 							style="color: #fff; text-decoration: underline;"
 							onclick="ym(27541782,'reachGoal','btn_order_ozon'); return true;"
+							target="_blank"
 						>
 							Закажите нашу тару на Озон
 						</a>
