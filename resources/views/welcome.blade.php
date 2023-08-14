@@ -17,7 +17,7 @@
                 <li>Крышка и колпачок</li>
                 <li>Индивидуальный заказ</li>
             </ul>
-            <a href="#free-feedback" type="button" class="hero__btn btn-hover wow fadeInUp" onclick="ym(Код,'reachGoal','btn_contact'); return true;">Связатся с нами</a>
+            <a href="#free-feedback" type="button" class="hero__btn btn-hover wow fadeInUp" onclick="ym(27541782,'reachGoal','btn_contact'); return true;">Связаться с нами</a>
         </div>
     </section>
 
