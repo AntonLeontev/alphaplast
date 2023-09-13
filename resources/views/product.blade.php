@@ -20,14 +20,29 @@
                     </div>
                     <div class="card__info">
                         <div><span> Артикул </span> {{ $product->part_number }}</div>
-                        <div><span> Диаметр</span> {{ $product->diameter }} мм</div>
-                        <div><span> Диаметр горла </span>{{ $product->throat_diameter }} мм</div>
-                        <div><span> Объем </span> {{ $product->volume }} мл</div>
-                        <div><span> Высота </span> {{ $product->height }} мм</div>
-                        <div><span> Вес </span> {{ $product->weight }} г</div>
+						@if ($product->diameter)
+                        	<div><span> Диаметр</span> {{ $product->diameter }} мм</div>
+						@endif
+						@if ($product->throat_diameter)
+                        	<div><span> Диаметр горла </span>{{ $product->throat_diameter }} мм</div>
+						@endif
+						@if ($product->volume)
+                        	<div><span> Объем </span> {{ $product->volume }} мл</div>
+						@endif
+						@if ($product->height)
+                        	<div><span> Высота </span> {{ $product->height }} мм</div>
+						@endif
+						@if ($product->weight)
+                        	<div><span> Вес </span> {{ $product->weight }} г</div>
+						@endif
                     </div>
                     <div class="card__card">
-                        <div>от {{ $product->price }}</div>
+						@if ($product->price)
+                        	<div>от {{ $product->price }}</div>
+						@else
+							<div>по запросу</div>
+						@endif
+                        
                         <a href="#" data-bs-toggle="modal" data-bs-target="#myModal">ЗАКАЗАТЬ</a>
                     </div>
                 </div>
