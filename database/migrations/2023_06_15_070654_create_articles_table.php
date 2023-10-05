@@ -13,14 +13,14 @@ return new class extends Migration
     {
         Schema::create('articles', function (Blueprint $table) {
             $table->id();
-			$table->string('title');
-			$table->string('slug')->unique();
-			$table->string('thumbnail')->nullable();
-			$table->text('description');
-			$table->string('description_short');
-			$table->foreignId('section_id')->constrained('article_sections')->cascadeOnDelete();
-			$table->boolean('on_home')->default(0);
-			$table->boolean('is_published')->default(0);
+            $table->string('title');
+            $table->string('slug')->unique();
+            $table->string('thumbnail')->nullable();
+            $table->text('description');
+            $table->string('description_short');
+            $table->foreignId('section_id')->constrained('article_sections')->cascadeOnDelete();
+            $table->boolean('on_home')->default(0);
+            $table->boolean('is_published')->default(0);
             $table->timestamps();
         });
     }

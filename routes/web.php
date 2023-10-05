@@ -35,12 +35,12 @@ Route::get('articles/section/{section}', [ArticleController::class, 'loadBySecti
 Route::get('products/{product}', [ProductController::class, 'show'])->name('products.show');
 Route::post('products/search', [ProductController::class, 'search']);
 
-Route::post('/send-form', function() {
-	if (empty(request()->phone) && empty(request()->email)) {
-		return response()->json('no data', 422);
-	}
+Route::post('/send-form', function () {
+    if (empty(request()->phone) && empty(request()->email)) {
+        return response()->json('no data', 422);
+    }
 
-	Mail::to(contacts()->email)->send(new NewOrder());
+    Mail::to(contacts()->email)->send(new NewOrder());
 
-	return response()->json('ok');
+    return response()->json('ok');
 });

@@ -3,7 +3,6 @@
 namespace Database\Seeders;
 
 use App\Models\Category;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class CategorySeeder extends Seeder
@@ -14,28 +13,28 @@ class CategorySeeder extends Seeder
     public function run(): void
     {
         Category::create([
-			'title' => 'Банки',
-			'slug' => 'banki',
-		]);
+            'title' => 'Банки',
+            'slug' => 'banki',
+        ]);
         Category::create([
-			'title' => 'Бутылки',
-			'slug' => 'butilki',
-		]);
+            'title' => 'Бутылки',
+            'slug' => 'butilki',
+        ]);
         Category::create([
-			'title' => 'Преформы',
-			'slug' => 'preformy',
-		]);
+            'title' => 'Преформы',
+            'slug' => 'preformy',
+        ]);
         Category::create([
-			'title' => 'ПЭТ-преформа для банок',
-			'slug' => 'pet-preforma-dlja-butilok',
-		]);
+            'title' => 'ПЭТ-преформа для банок',
+            'slug' => 'pet-preforma-dlja-butilok',
+        ]);
         Category::create([
-			'title' => 'Пресс-формы',
-			'slug' => 'press-formy',
-		]);
+            'title' => 'Пресс-формы',
+            'slug' => 'press-formy',
+        ]);
         Category::create([
-			'title' => 'Крышки',
-			'slug' => 'krishki',
-		]);
+            'title' => 'Крышки',
+            'slug' => 'krishki',
+        ]);
     }
 }

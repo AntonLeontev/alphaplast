@@ -3,18 +3,17 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
-use Illuminate\Http\Request;
 
 class HomePageController extends Controller
 {
     public function __invoke()
-	{
-		$articles = Article::query()
-			->where('on_home', 1)
-			->where('is_published', 1)
-			->orderByDesc('created_at')
-			->get();
+    {
+        $articles = Article::query()
+            ->where('on_home', 1)
+            ->where('is_published', 1)
+            ->orderByDesc('created_at')
+            ->get();
 
-		return view('welcome', compact('articles'));
-	}
+        return view('welcome', compact('articles'));
+    }
 }

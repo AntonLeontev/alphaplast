@@ -9,14 +9,14 @@ class Contact extends Model
 {
     use HasFactory;
 
-	public $timestamps = false;
+    public $timestamps = false;
 
-	protected $fillable = [
-		'address',
-		'primary_phone',
-		'secondary_phone',
-		'email',
-		'instagram',
-		'vk',
-	];
+    protected $fillable = [
+        'address',
+        'primary_phone',
+        'secondary_phone',
+        'email',
+        'instagram',
+        'vk',
+    ];
 }

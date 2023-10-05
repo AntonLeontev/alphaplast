@@ -11,26 +11,26 @@ class Product extends Model
 {
     use HasFactory;
 
-	protected $fillable = [
-		'title',
-		'slug',
-		'category_id',
-		'thumbnail',
-		'part_number',
-		'diameter',
-		'throat_diameter',
-		'height',
-		'price',
-		'volume',
-		'weight',
-	];
+    protected $fillable = [
+        'title',
+        'slug',
+        'category_id',
+        'thumbnail',
+        'part_number',
+        'diameter',
+        'throat_diameter',
+        'height',
+        'price',
+        'volume',
+        'weight',
+    ];
 
-	protected $casts = [
-		'price' => PriceCast::class,
-	];
+    protected $casts = [
+        'price' => PriceCast::class,
+    ];
 
-	public function category(): BelongsTo
-	{
-		return $this->belongsTo(Category::class);
-	}
+    public function category(): BelongsTo
+    {
+        return $this->belongsTo(Category::class);
+    }
 }

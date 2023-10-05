@@ -3,7 +3,6 @@
 namespace Database\Seeders;
 
 use App\Models\ArticleSection;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class ArticleSectionSeeder extends Seeder
@@ -14,12 +13,12 @@ class ArticleSectionSeeder extends Seeder
     public function run(): void
     {
         ArticleSection::create([
-			'title' => 'Новости из мира ПЭТ',
-			'slug' => 'novosti-pet',
-		]);
+            'title' => 'Новости из мира ПЭТ',
+            'slug' => 'novosti-pet',
+        ]);
         ArticleSection::create([
-			'title' => 'Новости компании',
-			'slug' => 'novosti-companii',
-		]);
+            'title' => 'Новости компании',
+            'slug' => 'novosti-companii',
+        ]);
     }
 }

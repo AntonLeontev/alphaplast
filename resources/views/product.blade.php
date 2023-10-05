@@ -37,7 +37,7 @@
 						@endif
                     </div>
                     <div class="card__card">
-						@if ($product->price)
+						@if (is_null($product->price) || $product->price === 0)
                         	<div>от {{ $product->price }}</div>
 						@else
 							<div>по запросу</div>

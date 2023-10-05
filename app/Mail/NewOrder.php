@@ -3,7 +3,6 @@
 namespace App\Mail;
 
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Address;
 use Illuminate\Mail\Mailables\Content;
@@ -29,7 +28,7 @@ class NewOrder extends Mailable
     {
         return new Envelope(
             subject: 'Заявка с сайта',
-			from: new Address(config('mail.from.address'), config('mail.from.name')),
+            from: new Address(config('mail.from.address'), config('mail.from.name')),
         );
     }
 

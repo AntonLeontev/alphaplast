@@ -14,17 +14,17 @@ return new class extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
-			$table->string('title');
-			$table->string('slug');
-			$table->foreignIdFor(Category::class)->constrained()->cascadeOnDelete();
-			$table->string('thumbnail')->nullable();
-			$table->string('part_number')->nullable();
-			$table->unsignedInteger('diameter')->nullable();
-			$table->unsignedInteger('throat_diameter')->nullable();
-			$table->unsignedInteger('height')->nullable();
-			$table->unsignedInteger('price')->nullable();
-			$table->unsignedInteger('volume')->nullable();
-			$table->unsignedInteger('weight')->nullable();
+            $table->string('title');
+            $table->string('slug');
+            $table->foreignIdFor(Category::class)->constrained()->cascadeOnDelete();
+            $table->string('thumbnail')->nullable();
+            $table->string('part_number')->nullable();
+            $table->unsignedInteger('diameter')->nullable();
+            $table->unsignedInteger('throat_diameter')->nullable();
+            $table->unsignedInteger('height')->nullable();
+            $table->unsignedInteger('price')->nullable();
+            $table->unsignedInteger('volume')->nullable();
+            $table->unsignedInteger('weight')->nullable();
             $table->timestamps();
         });
     }

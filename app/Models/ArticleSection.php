@@ -10,10 +10,10 @@ class ArticleSection extends Model
 {
     use HasFactory;
 
-	protected $fillable = ['title', 'slug'];
+    protected $fillable = ['title', 'slug'];
 
-	public function articles(): HasMany
-	{
-		return $this->hasMany(Article::class);
-	}
+    public function articles(): HasMany
+    {
+        return $this->hasMany(Article::class);
+    }
 }

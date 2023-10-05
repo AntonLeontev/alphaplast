@@ -10,15 +10,15 @@ class Category extends Model
 {
     use HasFactory;
 
-	public $timestamps = false;
+    public $timestamps = false;
 
-	protected $fillable = [
-		'title',
-		'slug',
-	];
+    protected $fillable = [
+        'title',
+        'slug',
+    ];
 
-	public function products(): HasMany
-	{
-		return $this->hasMany(Product::class);
-	}
+    public function products(): HasMany
+    {
+        return $this->hasMany(Product::class);
+    }
 }
