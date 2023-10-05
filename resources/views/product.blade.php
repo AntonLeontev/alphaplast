@@ -35,6 +35,8 @@
 						@if ($product->weight)
                         	<div><span> Вес </span> {{ $product->weight }} г</div>
 						@endif
+						<hr style="width: 100%; margin-top: 0">
+						<div><span> Цвет: </span> любой</div>
                     </div>
                     <div class="card__card">
 						@if (is_null($product->price) || $product->price === 0)
